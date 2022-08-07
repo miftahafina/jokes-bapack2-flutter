@@ -1,6 +1,8 @@
+import 'dart:async';
+import 'dart:convert' as convert;
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert' as convert;
 
 void main() {
   runApp(const MyApp());
@@ -44,7 +46,11 @@ class _JokeDetailState extends State<JokeDetail> {
       future: futureJoke,
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          return Text(snapshot.data!.data);
+          return Text(
+            snapshot.data!.data,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 32),
+          );
         } else if (snapshot.hasError) {
           return Text('${snapshot.error}');
         }

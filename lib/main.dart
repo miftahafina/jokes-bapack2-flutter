@@ -68,7 +68,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('JB2 Flutter'),
+        title: const Text('JokesBapack2 Flutter'),
       ),
       body: const SafeArea(
         child: Center(

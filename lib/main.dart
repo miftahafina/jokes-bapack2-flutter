@@ -104,7 +104,7 @@ class Joke {
 }
 
 Future<Joke> fetchJoke() async {
-  final response = await http.get(Uri.parse('https://jokes-bapack2-api.herokuapp.com/v1/text/random'));
+  final response = await http.get(Uri.parse('https://jokes-bapack2-api.yuana.id/v1/text/random'));
 
   if (response.statusCode == 200) {
     return Joke.fromJson(convert.jsonDecode(response.body));
